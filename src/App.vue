@@ -1,17 +1,22 @@
 <template>
   <div id="app">
+    <Nav/>
+    <Slideshow title="Testing out the props"/>
     <img alt="Vue logo" src="./assets/logo.png">
     <HelloWorld msg="Ollie First attempt at vue"/>
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
-
+import HelloWorld from './components/HelloWorld.vue';
+import Nav from './components/Nav.vue';
+import Slideshow from './components/Slideshow.vue';
 export default {
   name: 'App',
   components: {
-    HelloWorld
+    HelloWorld,
+    Nav,
+    Slideshow
   }
 }
 </script>
