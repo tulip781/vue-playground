@@ -1,7 +1,7 @@
 <template>
   <div id="app">
     <Nav/>
-    <Slideshow title="Testing out the props"/>
+    <Slideshow />
     <img alt="Vue logo" src="./assets/logo.png">
     <HelloWorld msg="Ollie First attempt at vue"/>
   </div>

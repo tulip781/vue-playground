@@ -1,6 +1,5 @@
 <template>
   <div class="flux">
-    <h1 class="title">{{title}}</h1>
     <vue-flux
       :options="options"
       :images="images"
@@ -22,7 +21,7 @@ import { VueFlux, FluxPreloader } from 'vue-flux';
       FluxPreloader,
     },
     props: {
-      title: String
+
     },
     data: () => ({
       options: {
@@ -48,12 +47,14 @@ import { VueFlux, FluxPreloader } from 'vue-flux';
 <style scoped lang="scss">
 .flux {
   position: relative;
+  max-height: 500px;
+  overflow: hidden;
 }
 .title{
   position: absolute;
   z-index: 10;
-  right: 50%;
-  top: 50%;
+  right: 50vw;
+  top: 50vh;
   transform: translate(-50%, -50%);
 }
 </style>
