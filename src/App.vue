@@ -2,7 +2,6 @@
   <div id="app">
     <Nav/>
     <Slideshow />
-    <img alt="Vue logo" src="./assets/logo.png">
     <HelloWorld msg="Ollie First attempt at vue"/>
   </div>
 </template>
