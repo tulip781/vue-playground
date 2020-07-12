@@ -4,10 +4,10 @@
         <li>SCREENPRINTS</li>
       </ul>
       <ul class="web-navbar">
-        <li><a href="">home</a></li>
+        <li><router-link to="/">home</router-link></li>
         <li><a href="">journal</a></li>
         <li><a href="">products</a></li>
-        <li><a href="">about</a></li>
+        <li><router-link to="/about">about</router-link></li>
       </ul>
       <ul class="mobile-navbar">
         <div class="hamburger hamburger--collapse">

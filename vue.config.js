@@ -3,7 +3,7 @@ module.exports = {
     config
       .plugin('html')
       .tap(args => {
-        args[0].title = 'SCREEN-PRINTS'
+        args[0].title = 'SCREENPRINTS'
         return args
       })
   }
