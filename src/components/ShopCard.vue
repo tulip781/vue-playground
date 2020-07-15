@@ -23,11 +23,11 @@ export default {
         {title: 'her', director: 'spike jonze', image: '/images/h.jpg'},
         {title: 'la haine', director: 'director name', image: '/images/lh.jpg'},
         {title: 'enter the void', director: 'gaspar noe', image: '/images/lh2.jpg'},
-        {title: 'enter the void', director: 'gaspar noe', image: '/images/lost.jpg'},
+        {title: 'Lost In Translation', director: 'gaspar noe', image: '/images/lost.jpg'},
         {title: 'enter the void', director: 'gaspar noe', image: '/images/love.jpg'},
         {title: 'enter the void', director: 'gaspar noe', image: '/images/ls.jpg'},
         {title: 'enter the void', director: 'gaspar noe', image: '/images/ls2.jpg'},
-        {title: 'enter the void', director: 'gaspar noe', image: '/images/ml.jpg'},
+        {title: 'Mood For Love', director: 'gaspar noe', image: '/images/ml.jpg'},
         {title: 'Mullholland Drive', director: 'gaspar noe', image: '/images/Mullholland Drive.jpg'},
         {title: 'Parasite', director: 'gaspar noe', image: '/images/paraiaiia.jpg'},
         {title: 'Parasite', director: 'gaspar noe', image: '/images/parasite 2.jpg'},
@@ -46,6 +46,7 @@ export default {
   grid-auto-rows: auto;
   grid-gap: 1rem;
   padding-top: 20px;
+  justify-content: center;
 }
 .card {
   /* Add shadows to create the "card" effect */
