@@ -5,7 +5,9 @@
     <div id="nav">
       <router-link :to="'home'">Home</router-link>
     </div>
-    <router-view />
+    <transition name ="router-anim" enter-active-class="animated fadeInDown" leave-active-class="animated fadeOutDown">
+      <router-view />
+    </transition>
   </div>
 </template>
 
@@ -28,7 +30,7 @@
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
-  margin: 0;
 }
+
 
 </style>
