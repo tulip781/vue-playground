@@ -1,6 +1,6 @@
 <template>
-<div>
-  <h1>{{books.length}} results</h1>
+<div class="shop">
+  <p>{{books.length}} results</p>
 </div>
 </template>
 
@@ -12,6 +12,8 @@ export default {
 
 </script>
 
-<style scoped lang="stylus">
-
+<style scoped lang="scss">
+.shop {
+  display: flex;
+}
 </style>

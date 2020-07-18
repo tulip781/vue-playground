@@ -21,14 +21,23 @@
 </script>
 
 <style lang="scss">
+@font-face {
+  font-family: "FavoritPro-Regular";
+  src: url(./assets/FavoritPro-Regular.otf);
+}
+
 #app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
+  font-family: FavoritPro-Regular;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
 }
 
+body {
+  padding: 0;
+  margin: 0;
+}
 .fade-enter-active,
 .fade-leave-active {
   transition-duration: 0.3s;
@@ -40,6 +49,7 @@
 .fade-leave-active {
   opacity: 0
 }
+
 
 
 </style>

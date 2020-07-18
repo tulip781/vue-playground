@@ -1,14 +1,17 @@
 <template>
-  <div class="flux">
-    <vue-flux
-      :options="options"
-      :images="images"
-      :transitions="transitions"
-    >
-      <template v-slot:preloader>
-          <flux-preloader />
-      </template>
-    </vue-flux>
+  <div class="carousel__wrapper">
+    <h1 class="carousel__title">Screenplays. In print.</h1>
+    <div class="flux">
+      <vue-flux
+        :options="options"
+        :images="images"
+        :transitions="transitions"
+      >
+        <template v-slot:preloader>
+            <flux-preloader />
+        </template>
+      </vue-flux>
+    </div>
   </div>
 </template>
 
@@ -38,7 +41,7 @@ import { VueFlux, FluxPreloader } from 'vue-flux';
       },
       images: [ '/images/love.jpg', '/images/space.jpg', '/images/lost.jpg' ],
       transitions: [
-          'slide',
+          'fade',
       ],
     })
   }
@@ -50,11 +53,19 @@ import { VueFlux, FluxPreloader } from 'vue-flux';
   max-height: 500px;
   overflow: hidden;
 }
-.title{
+.carousel__title{
   position: absolute;
+  top: 50%;
+  right: 50%;
   z-index: 10;
-  right: 50vw;
-  top: 50vh;
-  transform: translate(-50%, -50%);
+  transform: translate(50%, -50%);
+  color: white;
+  background-color: black;
+  padding: 5px 10px;
+  font-size: 4vw;
+}
+
+.carousel__wrapper {
+  position: relative;
 }
 </style>

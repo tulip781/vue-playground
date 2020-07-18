@@ -25,12 +25,13 @@ export default {
   grid-gap: 1rem;
   padding-top: 20px;
   justify-content: center;
+  background-color: rgb(245,246,247);
+  margin: 0px 10px;
 }
 .card {
   /* Add shadows to create the "card" effect */
-  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+
   transition: 0.3s;
-  border: 2px solid #e7e7e7;
   border-radius: 4px;
   padding: .5rem;
 }
@@ -42,6 +43,13 @@ export default {
 
 /* Add some padding inside the card container */
 .container {
-  padding: 2px 16px;
+
+  text-align: left;
+
+  h4, p {
+    padding: 0;
+    margin-top: 5px;
+    margin-bottom: 5px;
+  }
 }
 </style>
