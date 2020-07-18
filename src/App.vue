@@ -2,10 +2,7 @@
   <div id="app">
     <Nav />
     <SideBar />
-    <div id="nav">
-      <router-link :to="'home'">Home</router-link>
-    </div>
-    <transition name ="router-anim" enter-active-class="animated fadeInDown" leave-active-class="animated fadeOutDown">
+    <transition name="fade" mode="out-in">
       <router-view />
     </transition>
   </div>
@@ -30,6 +27,18 @@
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
+}
+
+.fade-enter-active,
+.fade-leave-active {
+  transition-duration: 0.3s;
+  transition-property: opacity;
+  transition-timing-function: ease;
+}
+
+.fade-enter,
+.fade-leave-active {
+  opacity: 0
 }
 
 
