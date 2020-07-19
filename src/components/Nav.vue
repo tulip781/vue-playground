@@ -4,9 +4,9 @@
         <li>SCREENPRINTS</li>
       </ul>
       <ul class="web-navbar">
-        <li><router-link to="/">home</router-link></li>
-        <li><a href="">journal</a></li>
-        <li><a href="">products</a></li>
+        <li><router-link to="/">shop</router-link></li>
+        <li><router-link to="subscription">subscription</router-link></li>
+        <li><router-link to="spotlight">spotlight</router-link></li>
         <li><router-link to="about">about</router-link></li>
       </ul>
       <ul class="mobile-navbar">

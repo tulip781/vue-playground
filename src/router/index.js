@@ -2,6 +2,9 @@ import Vue from 'vue'
 import VueRouter from 'vue-router'
 import Home from '../views/Home.vue'
 import About from '../views/About.vue'
+import Spotlight from '../views/Spotlight.vue'
+import Subscription from '../views/Subscription.vue'
+
 Vue.use(VueRouter)
 
   const routes = [
@@ -14,6 +17,16 @@ Vue.use(VueRouter)
     path: '/about',
     name: 'About',
     component: About
+  },
+  {
+    path: '/spotlight',
+    name: 'spotlight',
+    component: Spotlight
+  },
+  {
+    path: '/subscription',
+    name: 'subscription',
+    component: Subscription
   }
 ]
 
