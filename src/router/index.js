@@ -4,7 +4,7 @@ import Home from '../views/Home.vue'
 import About from '../views/About.vue'
 import Spotlight from '../views/Spotlight.vue'
 import Subscription from '../views/Subscription.vue'
-
+import Show from '../views/Show.vue'
 Vue.use(VueRouter)
 
   const routes = [
@@ -27,6 +27,11 @@ Vue.use(VueRouter)
     path: '/subscription',
     name: 'subscription',
     component: Subscription
+  },
+  {
+    path: 'book/:book',
+    component: Show,
+    name: 'show',
   }
 ]
 

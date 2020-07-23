@@ -1,11 +1,13 @@
 <template>
   <div class="cards">
     <div v-for="book in books" v-bind:key="book.id" class="card">
-      <img v-bind:src="book.image" alt="Avatar" style="width:100%">
-      <div class="container">
-        <h4>{{book.title}}</h4>
-        <p>{{book.director}}</p>
-      </div>
+      <router-link to="show" v-bind:book="book">
+        <img v-bind:src="book.image" alt="Avatar" style="width:100%">
+        <div class="container">
+          <h4>{{book.title}}</h4>
+          <p>{{book.director}}</p>
+        </div>
+      </router-link>
     </div>
   </div>
 </template>
