@@ -1,13 +1,18 @@
 <template>
-  <div class="about">
-    <img v-bind:src="book.image" alt="Avatar" style="width:100%">
+  <div>
+    <h1>HELLOOOOO SHOW</h1>
+    <h1>HELLOOOOO SHOW</h1>
+    <h1>HELLOOOOO SHOW</h1>
+    {{ $route.params.id }}
       <div class="container">
-        <h4>{{book.title}}</h4>
-        <p>{{book.director}}</p>
+
       </div>
     <h1>This is an show page</h1>
-    <h1>{{book.title}}</h1>
+
+    <div>User {{ $route.params.id }}</div>
+    
   </div>
+  
 </template>
 
 <script>
@@ -16,7 +21,11 @@ export default {
   name: 'Show',
   components: {
   },
-  props: ['book']
+  props: ['books'],
+  beforeMount(){
+    const book = this.$route.params.id;
+    console.log(book)
+  }
 }
 
 </script>

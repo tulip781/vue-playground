@@ -1,7 +1,7 @@
 <template>
   <div class="cards">
     <div v-for="book in books" v-bind:key="book.id" class="card">
-      <router-link to="show" v-bind:book="book">
+      <router-link :to="{ name: `'book/' + book.id`, params: {books: book}  }" v-bind:books="books">
         <img v-bind:src="book.image" alt="Avatar" style="width:100%">
         <div class="container">
           <h4>{{book.title}}</h4>
@@ -53,6 +53,11 @@ export default {
     padding: 0;
     margin-top: 5px;
     margin-bottom: 5px;
+    text-decoration: none;
+    color: black;
+    a {
+      text-decoration: none;
+    }
   }
 }
 </style>
