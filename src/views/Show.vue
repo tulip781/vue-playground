@@ -1,35 +1,49 @@
 <template>
   <div>
-    <h1>HELLOOOOO SHOW</h1>
-    <h1>HELLOOOOO SHOW</h1>
-    <h1>HELLOOOOO SHOW</h1>
-    {{ $route.params.id }}
-      <div class="container">
-
-      </div>
-    <h1>This is an show page</h1>
-
-    <div>User {{ $route.params.id }}</div>
-    
+    <div class="cardShow">
+      <h1>{{bookShowTitle.title}}</h1>
+      <h1>{{bookShowTitle.director}}</h1>
+      <h1>{{bookShowTitle.description}}</h1>
+      <img v-bind:src="bookShowTitle.image.url" alt="">
+    </div>
   </div>
-  
+
 </template>
 
 <script>
 // @ is an alias to /src
 export default {
   name: 'Show',
+  data(){
+    return {
+      bookShowTitle: {}
+    }
+  },
   components: {
   },
-  props: ['books'],
+  props: ['data'],
   beforeMount(){
-    const book = this.$route.params.id;
-    console.log(book)
+    if (this.data) {
+      const bookId = this.$route.params.id;
+      this.data['allBooks'].forEach(book => {
+        if (book.id === bookId) {
+          this.bookShowTitle = book;
+          console.log(book.image.url);
+          return
+        }
+      });
+    }
   }
 }
 
 </script>
 
 <style lang="scss">
-
+.cardShow {
+  margin-top: 60px;
+  width: 50%;
+  img {
+    width: 100%;
+  }
+}
 </style>

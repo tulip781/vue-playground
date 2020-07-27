@@ -3,21 +3,49 @@
     <Nav />
     <SideBar />
     <transition name="fade" mode="out-in">
-      <router-view />
+      <router-view :data="data"/>
     </transition>
   </div>
 </template>
 
 <script>
   import Nav from '@/components/Nav.vue';
+  import { request } from "./api/datocms";
   import SideBar from '@/components/SideBar.vue';
+  const HOMEPAGE_QUERY = `query MyQuery {
+    allBooks {
+      director
+      title
+      description
+      image {
+        url
+      }
+      id
+    }
+  }`;
   export default {
   name: 'App',
-    components: {
-      Nav,
-      SideBar
+  data: () => ({
+    data: null,
+    error: null,
+    loading: true,
+  }),
+  components: {
+    Nav,
+    SideBar
+  },
+  async mounted() {
+    try {
+      this.data = await request({
+        query: HOMEPAGE_QUERY
+      });
+    } catch (e) {
+      this.error = e;
     }
+    this.loading = false;
   }
+}
+
 </script>
 
 <style lang="scss">

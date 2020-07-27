@@ -2,7 +2,7 @@
   <div class="home">
     <Slideshow/>
     <SearchBar :search="search" v-bind:books="filteredList"/>
-    <ShopCard v-bind:books="filteredList"/>
+    <ShopCard v-bind:books="data['allBooks']"/>
   </div>
 </template>
 
@@ -13,6 +13,7 @@ import ShopCard from '@/components/ShopCard.vue';
 import SearchBar from '@/components/SearchBar.vue';
 export default {
   name: 'Home',
+  props: ['data'],
   components: {
     Slideshow,
     ShopCard,
