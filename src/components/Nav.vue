@@ -1,7 +1,7 @@
 <template>
   <header class="navbar-wrapper font-color">
       <ul>
-        <li>SCREENPRINTS</li>
+        <li><router-link to="/">SCREENPRINTS</router-link></li>
       </ul>
       <ul class="web-navbar">
         <li><router-link to="/">shop</router-link></li>

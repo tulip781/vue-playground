@@ -29,7 +29,7 @@ Vue.use(VueRouter)
     component: Subscription
   },
   {
-    path: 'book/:book',
+    path: '/book/:id',
     component: Show,
     name: 'show',
   }
