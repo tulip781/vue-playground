@@ -1,8 +1,8 @@
 <template>
   <div class="home">
     <Slideshow/>
-    <SearchBar v-bind:books="books"/>
-    <ShopCard v-bind:books="books"/>
+    <SearchBar :search="search" v-bind:books="filteredList"/>
+    <ShopCard v-bind:books="filteredList"/>
   </div>
 </template>
 
@@ -18,8 +18,16 @@ export default {
     ShopCard,
     SearchBar
   },
+  computed: {
+    filteredList() {
+      return this.books.filter(book => {
+        return book.title.toLowerCase().includes(this.search.toLowerCase())
+      })
+    }
+  },
   data(){
     return {
+      search: '',
       books: [
         {title: 'before sunrise', director: 'richard linklater', image: '/images/bs.jpg'},
         {title: 'before midnight', director: 'richard linklater', image: '/images/bm.jpg'},
