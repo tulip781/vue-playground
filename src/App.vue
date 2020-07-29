@@ -1,10 +1,18 @@
 <template>
   <div id="app">
-    <Nav />
-    <SideBar />
-    <transition name="fade" mode="out-in">
-      <router-view :data="data"/>
-    </transition>
+    <div v-if="loading">
+      Loading...
+    </div>
+    <div v-else-if="error">
+      Something bad happened!
+    </div>
+    <div v-else>
+      <Nav />
+      <SideBar />
+      <transition name="fade" mode="out-in">
+        <router-view :data="data"/>
+      </transition>
+    </div>
   </div>
 </template>
 
