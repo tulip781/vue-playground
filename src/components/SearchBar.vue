@@ -1,7 +1,8 @@
 <template>
 <div class="shop">
   <p class="searchBar__spacer">{{books.length}} results</p>
-  <input type="text" v-model="search" class="searchBar__spacer"/>
+  <input type="text" v-model="search" class="searchBar__spacer" />
+  <h1>{{search}}</h1>
   <button class="searchBar__spacer">Search</button>
 </div>
 </template>
@@ -9,18 +10,15 @@
 <script>
 export default {
   name: 'Searchbar',
-  props: ['books', 'search'],
-  mounted () {
-    this.searchForResult = this.search;
-  },
+  props: ['books'],
   data() {
     return {
-      searchForResult: ''
+      search: '',
     }
   },
   watch:{
-    searchForResult(val){
-      this.$emit('search', val);
+    search(val){
+      this.$emit('searchresult', val);
     }
   }
 }

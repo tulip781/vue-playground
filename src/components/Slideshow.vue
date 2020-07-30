@@ -50,7 +50,7 @@ import { VueFlux, FluxPreloader } from 'vue-flux';
 <style scoped lang="scss">
 .flux {
   position: relative;
-  max-height: 500px;
+  max-height: 50vh;
   overflow: hidden;
 }
 .carousel__title{
