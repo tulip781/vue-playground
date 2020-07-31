@@ -7,7 +7,7 @@
 </template>
 
 <script>
-// @ is an alias to /src
+
 import Slideshow from '@/components/Slideshow.vue';
 import ShopCard from '@/components/ShopCard.vue';
 import SearchBar from '@/components/SearchBar.vue';
