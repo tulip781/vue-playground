@@ -61,7 +61,7 @@ export default {
 
 @media only screen and (max-width: 600px) {
   .showcontainer{
-    flex-direction: column-reverse;
+    flex-direction: column;
     align-items: center;
 
   img {
