@@ -2,7 +2,7 @@
   <div class="cards">
     <div v-for="book in books" v-bind:key="book.id" class="card">
       <router-link :to="'book/' + book.id" >
-        <img v-bind:src="book.image.url" alt="Avatar" style="width:100%">
+        <img v-bind:src="book.image.url + '?w=300'" alt="Avatar" style="width:100%">
         <div class="container">
           <h4>{{book.title}}</h4>
           <p>{{book.director}}</p>

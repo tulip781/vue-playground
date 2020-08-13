@@ -5,7 +5,7 @@
       <h3 class="showdirector">{{bookShowTitle.director}}</h3>
       <p class="showbody">{{bookShowTitle.description}}</p>
     </div>
-    <img v-bind:src="bookShowTitle.image.url" alt="">
+    <img v-bind:src="bookShowTitle.image.url + '?w=700'" alt="">
     <h3 class="show__recomended">What others are reading</h3>
     <ShopCard class="show__reccomendlist" :books="bookList"></ShopCard>
   </div>

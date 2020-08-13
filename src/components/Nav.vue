@@ -4,7 +4,7 @@
         <li><router-link to="/">SCREENPRINTS</router-link></li>
       </ul>
       <ul class="web-navbar">
-        <li><router-link to="/">shop</router-link></li>
+        <li><router-link to="home">shop</router-link></li>
         <li><router-link to="subscription">subscription</router-link></li>
         <li><router-link to="spotlight">spotlight</router-link></li>
         <li><router-link to="about">about</router-link></li>
