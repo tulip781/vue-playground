@@ -1,6 +1,7 @@
 <template>
   <div class="lander__wrapper">
-    <div class="lander_featured" ref="bg">
+
+    <div class="lander_featured" ref="bg" v-for="blog in blogs" :key="blog.id">
 
     </div>
     <div class="lander_featured">
@@ -19,9 +20,7 @@
     components: {
 
     },
-    props: {
-
-    },
+    props: [ 'blogs' ],
     beforeMount() {
       // const imgs = ['/images/lost.jpg', '/images/space.jpg', '/images/ml.jpg']
 

@@ -4,8 +4,8 @@
         <li><router-link to="/">SCREENPRINTS</router-link></li>
       </ul>
       <ul class="web-navbar">
-        <li><router-link to="home">bookshop</router-link></li>
-        <li><router-link to="spotlight">spotlight</router-link></li>
+        <li><router-link to="home">shop</router-link></li>
+        <li><router-link to="spotlight">blog</router-link></li>
         <li><router-link to="about">about</router-link></li>
       </ul>
       <ul class="mobile-navbar">

@@ -1,6 +1,6 @@
 <template>
   <div class="home">
-    <Lander/>
+    <Lander :blogs='simpleBlogs'/>
   </div>
 </template>
 
@@ -14,26 +14,18 @@ export default {
   components: {
     Lander
   },
-  computed: {
-    filteredBooks: function () {
-      if (this.searchRequest != '') {
-        return this.data['allBooks'].filter((el) => {
-          return el.title.toLowerCase().indexOf(this.searchRequest.toLowerCase()) !== -1
-        })
-      }
-      return this.data['allBooks']
-    }
-  },
-  methods: {
-    updateSearchVal: function (val) {
-      this.searchRequest = val
-    }
-  },
-  data(){
+  data: function(){
     return {
-      searchRequest: ''
+      blogs: []
     }
-  }
+  },
+  computed: {
+    simpleBlogs: function() {
+      return this.data["allBlogposts"]
+    }
+    
+  },
+  
 
 }
 </script>

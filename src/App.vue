@@ -21,14 +21,25 @@
   import { request } from "./api/datocms";
   import SideBar from '@/components/SideBar.vue';
   const HOMEPAGE_QUERY = `query MyQuery {
-    allBooks {
-      director
-      title
+    allBooks(orderBy: _createdAt_ASC) {
       description
+      director
+      id
       image {
         url
       }
+      image2 {
+        url
+      }
+    }
+    allBlogposts(orderBy: _createdAt_ASC) {
       id
+      featuredTextMini
+      featuredTitle
+      textBody
+      coverimage {
+        url
+      }
     }
   }`;
   export default {
