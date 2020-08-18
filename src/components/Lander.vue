@@ -17,9 +17,6 @@
 
   export default {
     name: 'Lander',
-    components: {
-
-    },
     props: [ 'blogs' ],
     beforeMount() {
       // const imgs = ['/images/lost.jpg', '/images/space.jpg', '/images/ml.jpg']
