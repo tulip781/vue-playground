@@ -24,6 +24,7 @@
     allBooks(orderBy: _createdAt_ASC) {
       description
       director
+      title
       id
       image {
         url

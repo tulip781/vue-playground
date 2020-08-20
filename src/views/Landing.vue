@@ -1,6 +1,6 @@
 <template>
   <div class="home">
-    <Lander :blogs='simpleBlogs'/>
+    <Lander :blogs='simpleBlogs' :featuredBooks='featuredBooks'/>
   </div>
 </template>
 
@@ -21,11 +21,19 @@ export default {
   },
   computed: {
     simpleBlogs: function() {
-      return this.data["allBlogposts"]
+      return this.data["allBlogposts"];
+    },
+    featuredBooks: function() {
+      const result = this.data["allBooks"].filter(book => book.image2 != null);
+
+      return result
     }
-    
+
   },
-  
+  beforeMount: function(){
+    console.log(this.data)
+  }
+
 
 }
 </script>

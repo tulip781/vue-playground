@@ -1,8 +1,8 @@
 <template>
   <div class="home">
     <Slideshow/>
-    <SearchBar v-bind:books="data['allBooks']" @searchresult="updateSearchVal"/>
-    <ShopCard class="home__shopwrapper" v-bind:books="filteredBooks"/>
+    <SearchBar v-bind:books="data['allBooks']" @searchresult="updateSearchVal" class="shop_padding"/>
+    <ShopCard class="home__shopwrapper shop_padding" v-bind:books="filteredBooks"  />
   </div>
 </template>
 
@@ -44,6 +44,8 @@ export default {
 </script>
 
 <style lang="scss">
-
+.shop_padding {
+  padding: 0px 60px;
+}
 
 </style>
