@@ -12,6 +12,7 @@
       <transition name="fade" mode="out-in">
         <router-view :data="data"/>
       </transition>
+      <Footer />
     </div>
   </div>
 </template>
@@ -20,6 +21,7 @@
   import Nav from '@/components/Nav.vue';
   import { request } from "./api/datocms";
   import SideBar from '@/components/SideBar.vue';
+  import Footer from '@/components/Footer.vue';
   const HOMEPAGE_QUERY = `query MyQuery {
     allBooks(orderBy: _createdAt_ASC) {
       description
@@ -52,7 +54,8 @@
   }),
   components: {
     Nav,
-    SideBar
+    SideBar,
+    Footer
   },
   async mounted() {
     try {

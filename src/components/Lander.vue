@@ -5,14 +5,6 @@
           <flux-preloader />
       </template>
     </vue-flux>
-
-    <div class="lander_featured" ref="bg" v-for="blog in blogs" :key="blog.id" :style="{ backgroundImage: 'url(' + blog.coverimage.url + ')' }">
-      <h1>{{blog.featuredTitle}}</h1>
-      <h3>{{blog.featuredTextMini}}</h3>
-    </div>
-    <div class="lander_featured">
-
-    </div>
   </div>
 </template>
 
@@ -71,14 +63,6 @@ import { VueFlux, FluxPreloader} from 'vue-flux';
   }
 }
 
-.lander_featured {
-  height: 100vh;
-  width: 100vw;
-  background-image: url('/images/lost.jpg');
-  background-size: cover;
-  background-position: center;
-  scroll-snap-align: start;
-}
 
 .landing__flux {
   display: inline-block;

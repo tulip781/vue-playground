@@ -2,7 +2,9 @@
   <div class="home">
     <Slideshow/>
     <SearchBar v-bind:books="data['allBooks']" @searchresult="updateSearchVal" class="shop_padding"/>
-    <ShopCard class="home__shopwrapper shop_padding" v-bind:books="filteredBooks"  />
+    <div class="center__shop">
+      <ShopCard class="home__shopwrapper shop_padding" v-bind:books="filteredBooks"  />
+    </div>
   </div>
 </template>
 
@@ -46,6 +48,12 @@ export default {
 <style lang="scss">
 .shop_padding {
   padding: 0px 60px;
+  width: 75%;
 }
 
+.center__shop {
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+}
 </style>

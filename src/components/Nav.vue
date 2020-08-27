@@ -213,7 +213,7 @@ header.lander_style {
   justify-content: space-between;
   border-bottom: 1px solid white;
   background-color: rgba(1,1,1,1);
-  z-index: 40;
+  z-index: 1000;
   transition: top 0.3s;
   ul {
     list-style: none;
