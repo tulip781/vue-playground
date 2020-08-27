@@ -1,12 +1,10 @@
 <template>
   <div class="lander__wrapper">
-    <vue-flux :options="options" :images="bookCovers" :transitions="transitions" >
-      <template v-slot:preloader>
+    <vue-flux :options="options" :images="bookCovers" :transitions="transitions" class="landing__flux">
+      <template v-slot:preloader class="landing__flux__image">
           <flux-preloader />
       </template>
     </vue-flux>
-    <div class="lander_featured" v-for="book in featuredBooks" :key="book.id" :style="{ backgroundImage: 'url(' + book.image2.url + ')' }">
-    </div>
 
     <div class="lander_featured" ref="bg" v-for="blog in blogs" :key="blog.id" :style="{ backgroundImage: 'url(' + blog.coverimage.url + ')' }">
       <h1>{{blog.featuredTitle}}</h1>
@@ -19,20 +17,21 @@
 </template>
 
 <script>
-import { VueFlux, FluxPreloader } from 'vue-flux';
+import { VueFlux, FluxPreloader} from 'vue-flux';
   export default {
     name: 'Lander',
     components: {
       VueFlux,
-      FluxPreloader,
+      FluxPreloader
     },
     props: [ 'blogs', 'featuredBooks' ],
     computed: {
       bookCovers: function(){
-        let covers;
+        let covers = [];
         this.featuredBooks.forEach((book) => {
-          console.log(book)
-          // covers.push(book.image2.url)
+          let sizeBook =  book.image2.url + '?w=2500';
+          covers.push(sizeBook);
+          console.log(covers)
         })
         return covers;
       }
@@ -79,5 +78,25 @@ import { VueFlux, FluxPreloader } from 'vue-flux';
   background-size: cover;
   background-position: center;
   scroll-snap-align: start;
+}
+
+.landing__flux {
+  display: inline-block;
+  height: 100vh;
+  width: 100vw;
+  background-size: cover;
+  background-position: center;
+  scroll-snap-align: start;
+
+}
+
+.landing__flux__image {
+  height: 100vh;
+    
+}
+
+.flux-image {
+  width: 100%;
+  height: 100%;
 }
 </style>

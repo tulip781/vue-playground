@@ -57,7 +57,7 @@ header {
   justify-content: space-between;
   border-bottom: 1px solid black;
   background-color: white;
-  z-index: 30;
+  z-index: 400;
   transition: top 0.3s;
   ul {
     list-style: none;
