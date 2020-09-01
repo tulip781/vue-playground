@@ -22,7 +22,7 @@
         <img
 
           class="footer_logo"
-          alt="Matte"
+          alt="Prints"
         />
         <ul class="matte_components">
           <li>
@@ -86,4 +86,47 @@ export default {
 </script>
 
 <style scoped lang="scss">
+footer {
+  color: #fff;
+  width: 100%;
+  background: #000;
+  padding: 30px 0 60px;
+  box-sizing: border-box;
+  font-size: 2vw;
+  text-transform: uppercase;
+  letter-spacing: 0.25em;
+  line-height: 2em;
+}
+.inner-wrap{
+  color: #fff;
+  font-size: 13px;
+  text-transform: uppercase;
+  letter-spacing: 0.25em;
+  line-height: 2em;
+  position: relative;
+  height: 100%;
+  width: 90%;
+  max-width: 1280px;
+  margin: auto;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+}
+
+.footer_left {
+  color: #fff;
+  font-size: 13px;
+  text-transform: uppercase;
+  letter-spacing: 0.25em;
+  line-height: 2em;
+  padding: 0 20px;
+}
+
+.address{
+  color: #fff;
+  font-size: 13px;
+  text-transform: uppercase;
+  letter-spacing: 0.25em;
+  line-height: 2em;
+}
 </style>
