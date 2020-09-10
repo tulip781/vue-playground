@@ -44,6 +44,14 @@
         url
       }
     }
+    allAboutpages {
+    id
+    }
+    aboutpage {
+      holdingimage {
+        url
+      }
+    }
   }`;
   export default {
   name: 'App',

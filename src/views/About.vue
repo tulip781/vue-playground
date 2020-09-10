@@ -1,7 +1,10 @@
 <template>
   <div class="about">
-
+    <br>
+    <br>
+    <br>
     <h1>This is an about page</h1>
+    <h1>{{about}}</h1>
   </div>
 </template>
 
@@ -11,7 +14,12 @@
 
 export default {
   name: 'About',
-  components: {
+  props: ['data'],
+  computed: {
+    about: function() {
+      return this.data.aboutpage.url
+    }
   }
+
 }
 </script>

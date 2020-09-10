@@ -1,6 +1,10 @@
 <template>
   <div class="subscription_wrapper">
     <h1>SUBSCRIPTION</h1>
+    <h1>SUBSCRIPTION</h1>
+    <h1>SUBSCRIPTION</h1>
+    <h1>SUBSCRIPTION</h1>
+    <h1>SUBSCRIPTION</h1>
   </div>
 </template>
 
